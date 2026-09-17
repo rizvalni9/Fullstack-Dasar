@@ -1,0 +1,88 @@
+//Mengambil data yang tersimpan
+GET http://localhost:5000/products
+
+//Mengambil data yang tersipan berdasarkan id
+###
+GET http://localhost:5000/products/1
+
+//Menyimpan data ke database
+###
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "namaproduct" : "COOLER MASTER 105 MM 3500 Rpm ",
+    "kategori" : "Cooling Computer",
+    "harga" : 450000,
+    "stock" : 10
+}
+
+//Mengupdate data di database berdasarkan id
+###
+PATCH http://localhost:5000/products/1
+Content-Type: application/json
+
+{
+    "namaproduct" : "Keyboard",
+    "kategori" : "Device Computer",
+    "harga" : 90000,
+    "stock" : 12
+}
+
+//Delete data di database berdasarkan id
+###
+DELETE http://localhost:5000/products/2
+Content-Type: application/json
+
+
+
+
+
+
+
+
+//KARYAWAN
+
+//Mengambil data yang tersimpan
+###
+GET http://localhost:5000/karyawans
+
+###
+GET http://localhost:5000/karyawans/1
+
+###
+POST http://localhost:5000/karyawans
+Content-Type: application/json
+
+{
+    "IdKaryawan" : "2156735157235",
+    "NamaKaryawan" : "Rizqon Nauval Zaloni",
+    "JenisKelamin" : "Laki-Laki",
+    "Jabatan" : "Junior Fullstack Developer",
+    "Pendidikan": "S1 Sistem Informasi"
+}
+
+//Mengupdate data di database berdasarkan id
+###
+PATCH http://localhost:5000/karyawans/2
+Content-Type: application/json
+
+{
+    "IdKaryawan" : "100342",
+    "NamaKaryawan" : "Musholini Fredicianto",
+    "JenisKelamin" : "Laki-Laki",
+    "Jabatan" : "UI-UX",
+    "Pendidikan": "S1 Desain Komunikasi Visual"
+}
+
+//Delete data di database berdasarkan id
+###
+DELETE http://localhost:5000/karyawans/3
+Content-Type: application/json
+
+//LATTIHAN 
+###
+GET http://localhost:5000/products/kategori/Device Computer
+
+###
+GET http://localhost:5000/products/search?namaProduk=board&maxHarga=100000
